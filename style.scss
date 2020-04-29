@@ -1,0 +1,276 @@
+$primary-color: #f4f4f4;
+$secondary-color: #3e90a0;
+$dark-color: #575757;
+
+body{
+    font: 15px/1.5 Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: $primary-color;
+}
+
+/*Global*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.button_1{
+    height: 38px;
+    background: $dark-color;
+    border: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    color:$primary-color;
+}
+
+.dark{
+    padding: 15px;
+    background: $dark-color;
+    color:$primary-color;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Header*/
+header{
+    background: $secondary-color;
+    color: $primary-color;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: $dark-color 3px solid;
+}
+
+header a{
+    color: $primary-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color:$dark-color;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+#showcase{
+    min-height:400px;
+    background: url('../images/microfon.jpg') no-repeat 0 -400px;
+    background-size: 2100px;
+    text-align: center;
+    color: $secondary-color;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+    color: $primary-color;
+}
+
+/* Newsletter */
+
+#newsletter{
+    padding:15px;
+    color: $dark-color;
+    background: $secondary-color;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type='email']{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Grid */
+.boxes{
+    padding-top: 1rem;
+}
+
+.boxes .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+}
+
+img{
+    width: 100px;
+}
+
+
+/* Sidebar */
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+/* Main-col */
+#main #main-col {
+    float: left;
+    width: 65%;
+    color: $dark-color;
+}
+
+#main #main-table{
+    color: $dark-color;
+    font-size: 15px;
+}
+
+/* Services */
+ul#services li{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: $primary-color;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: $primary-color;
+    background-color: $dark-color;
+    text-align: center;
+}
+
+/* Boxes */
+
+.boxes a{
+    color:$dark-color;
+    font-weight: bold;
+}
+
+.boxes a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Table content */
+.table{
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+  
+.table thead th{
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+  
+.table tbody tr td{
+    color: $dark-color;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+  
+.table tbody tr td:first-child{
+    text-align: left;
+}
+  
+.table tbody tr:nth-child(even){
+    background: $secondary-color;
+}
+
+
+/* English page */
+
+
+
+/* Media Queries */
+@media(max-width: 900px){
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    article#main-col,
+    aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    #newsletter button, .quote button{
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type='email'], .quote input, .quote textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .table tbody tr td{
+        padding: 0.5rem 0.5rem;
+    }
+    
+    .table thead th{
+        padding: 1.5rem;
+    }
+    
+    .table{
+        width: 30%;
+        font-size: 0.75rem;
+    }
+}
